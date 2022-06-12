@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SocialController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,8 +21,12 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function (Request $request) {
     // dd($request->ip());
-    
+
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/login/{social}',[SocialController::class, 'socialLogin'])->where('social','twitter|facebook|linkedin|google|github|bitbucket');
+
+Route::get('/login/{social}/callback', [SocialController::class, 'handleProviderCallback'])->where('social','twitter|facebook|linkedin|google|github|bitbucket');
 
 require __DIR__.'/auth.php';

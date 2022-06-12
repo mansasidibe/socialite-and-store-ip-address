@@ -52,19 +52,19 @@
                 </x-button>
             </div>
               <div class="flex items-center justify-end mt-4">
-                <a class="btn" href="#"
+                <a class="btn" href="{{ url('login/facebook') }}"
                     style="background: #3B5499; color: #ffffff; padding: 10px; width: 100%; text-align: center; display: block; border-radius:3px;">
                     Connexion avec Facebook
                 </a>
             </div>
               <div class="flex items-center justify-end mt-4">
-                <a class="btn" href="#"
+                <a class="btn" href="{{ url('login/google') }}"
                     style="background: red; color: #ffffff; padding: 10px; width: 100%; text-align: center; display: block; border-radius:3px;">
                     Connexion avec Google
                 </a>
             </div>
              <div class="flex items-center justify-end mt-4">
-                <a class="btn" href="#"
+                <a class="btn" href="{{ url('login/github') }}"
                     style="background: black; color: #ffffff; padding: 10px; width: 100%; text-align: center; display: block; border-radius:3px;">
                     Connexion avec GitHub
                 </a>
